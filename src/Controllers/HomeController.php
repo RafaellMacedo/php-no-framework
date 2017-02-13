@@ -8,8 +8,8 @@ class HomeController extends Controller{
 
 	public function index(){
 		$layout = __DIR__ . '/../layouts/home_layout';
-		$view = __DIR__ . '/../views/home/index.php';
+		$view = __DIR__ . '/../views/funcionario/index.php';
 
-		return new HTMLRenderer($layout, $view, ['title'=>'HOME', 'texto'=>123]);
+		return new HTMLRenderer($layout, $view, ['title'=>'Funcionario']);
 	}
 }

@@ -5,10 +5,11 @@ use \ReflectionClass;
 
 class Application{
 
-	private $config;
+	public $config;
 	private $routes;
 	private $requestedRoute;
 	private $requestMethod;
+	public $container;
 
 	public function __construct($config){
 		if(!is_array($config)){
@@ -34,6 +35,8 @@ class Application{
 	public function run(){
 		$this->requestedRoute = $_SERVER['REQUEST_URI'];
 		$actions = $this->matchRoute();
+
+		$this->container = new Container($this);
 
 		$this->runActionByMethod($actions);
 

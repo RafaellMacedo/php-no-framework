@@ -1,0 +1,28 @@
+version: '2'
+services:
+    #   dbdata:
+    #   image: mysql:latest
+    #   command: /bin/true
+    app:
+        image: otavioarrudasantos:php-dev_mysql
+        ports:
+            - 8000:8000
+        volumes:
+            - .:/apps
+        links:
+            - db:db
+        command: php -S 0.0.0.0:8000 -t /apps/public/
+        depends_on: 
+            - db
+    db:
+        image: mysql:latest
+        ports: 
+            - 3306:3306
+    #        volumes_from: 
+    #        - dbdata
+        volumes:
+            - ~/public_html/teste-connectparts/database/mysql:/var/lib/mysql
+            - ~/public_html/teste-connectparts/database/db.sql:/db.sql
+        environment:
+            - MYSQL_ROOT_PASSWORD=1
+            - MYSQL_USER_DEV=root

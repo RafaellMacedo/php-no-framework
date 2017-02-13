@@ -5,19 +5,26 @@ return [
 		'#^/?$#' => [
 			'GET' => 'NoFw\\Controllers\\HomeController@index'
 		],
-		'#^/usuario/?$#' => [
-			'GET' => 'NoFw\\Controllers\\UsuarioController@index',
-			'POST' => 'NoFw\\Controllers\\Usuario@post',
+		'#^/funcionario/?$#' => [
+			'GET' => 'NoFw\\Controllers\\FuncionarioController@index',
+			'POST' => 'NoFw\\Controllers\\FuncionarioController@post',
 		],
-		'#^/usuario/(?P<id>[0-9]+)/?$#' => [
-			'GET' => 'NoFw\\Controllers\\UsuarioController@get',
-			'PUT' => 'NoFw\\Controllers\\UsuarioController@put',
-			'DELETE' => 'NoFw\\Controllers\\UsuarioController@delete',
+		'#^/funcionario/editar/(?P<id>[0-9]+)/?$#' => [
+			'GET' => 'NoFw\\Controllers\\FuncionarioController@editar',
 		],
+		'#^/funcionario/delete/(?P<id>[0-9]+)/?$#' => [
+			'GET' => 'NoFw\\Controllers\\FuncionarioController@delete',
+		],
+	],
 
-		'#^/usuario/(?P<id>[0-9]+)/perfil/(?P<perfil>[0-9]+)/?$#' => [
-			'GET' => 'NoFw\\Controllers\\UsuarioController@getRelated',
-		],
-
+	'db'=>[
+		'driver'=>'mysql',
+		'dbname' => 'teste',
+		'host'=>'testeconnectparts_db_1',
+		'username' => 'root',
+		'password' => '1'
+	],
+	'services' => [
+		'dbDriver' => 'NoFw\\Db\\ConnectionFactory'
 	]
 ];

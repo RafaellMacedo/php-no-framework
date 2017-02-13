@@ -1,2 +1,7 @@
-<h1> Não é que eu funciono mesmo!</h1>
-<p><?=$texto?></p>
+<div class="container">
+	<div class="jumbotron">
+	  <h1>Hello, world!</h1>
+	  <p><?=$texto?></p>
+	  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+	</div>
+</div>
