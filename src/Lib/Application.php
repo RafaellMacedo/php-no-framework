@@ -125,5 +125,4 @@ class Application{
 	public function render($controllerResponse){
 		$controllerResponse->render();
 	}
-
 }

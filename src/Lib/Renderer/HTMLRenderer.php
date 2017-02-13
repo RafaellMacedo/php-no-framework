@@ -24,9 +24,9 @@ class HTMLRenderer implements Renderable{
 
 	public function render(){
 		extract($this->parameters);
-		echo require $this->layout . '/head_layout.php';
-		echo require $this->view;
-		echo require $this->layout . '/foot_layout.php';
+		require $this->layout . '/head_layout.php';
+		require $this->view;
+		require $this->layout . '/foot_layout.php';
 
 	}
 }
