@@ -8,6 +8,7 @@ Basic App Without Framework
   - Set the server DOCUMENT ROOT to ``public/`` directory of the application;
     - You can use the command ``php -S 0.0.0.0:8000 -t public/``
   - Access localhost:8000/funcionario
+##Don't forget to create the database (see ``db.sql``) and configure your database connection
     
 #Application Structure;
   - configs/config.php
