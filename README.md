@@ -7,6 +7,7 @@ Basic App Without Framework
   - Run "php composer.phar install" or "composer install"
   - Set the server DOCUMENT ROOT to ``public/`` directory of the application;
     - You can use the command ``php -S 0.0.0.0:8000 -t public/``
+  - Access localhost:8000/funcionario
     
 #Application Structure;
   - configs/config.php
