@@ -1,6 +1,7 @@
 # php-no-framework
 Basic App Without Framework
 #Instalation
+  - php min version 5.6
   - Clone the repository
   - If you don't have composer yet, please get it by this [LINK] (https://getcomposer.org/)
   - Run "php composer.phar install" or "composer install"
