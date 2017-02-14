@@ -60,14 +60,17 @@ if(isset($postData)){
 <?php if(isset($funcionariosList)){ ?>
 		
 		
-				<table class='table ' border='1'>
+				<table class='table '>
 					<thead>
-						<tr>Nome </tr>
-						<tr>Setor</tr>
-						<tr>Cargo</tr>
-						<tr>Data de Admissão</tr>
-						<tr>Salário Atual</tr>
-						<tr>Ações</tr>
+						<tr>
+							<th>Nome </th>
+							<th>Setor</th>
+							<th>Cargo</th>
+							<th>Data de Admissão</th>
+							<th>Salário Atual</th>
+							<th>Ações</th>
+						</tr>
+						
 					</thead>
 					<tbody>
 						
